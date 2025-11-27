@@ -11,7 +11,6 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #configuración de ssh
@@ -25,7 +24,14 @@ ssh-add -q ~/.ssh/lubuntu-hp 2>/dev/null
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-plugins=(git)
+plugins=(
+	git 
+	zsh-autosuggestions
+	copyfile
+	dirhistory 
+	history 
+	jsontools	
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,10 +64,10 @@ source $ZSH/oh-my-zsh.sh
 alias ..="cd .."
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
-#configuración alias git bare
+alias lls="ls -al"
+
+#==========configuración git bare======
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
