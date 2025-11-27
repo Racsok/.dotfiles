@@ -65,6 +65,7 @@ alias ..="cd .."
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias lls="ls -al"
+alias cdnv="cd ~/.config/nvim/"
 #==========configuración git bare======
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
