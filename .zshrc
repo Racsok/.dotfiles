@@ -65,7 +65,6 @@ alias ..="cd .."
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias lls="ls -al"
-
 #==========configuración git bare======
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
