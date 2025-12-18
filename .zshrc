@@ -11,6 +11,10 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
+#Path para netbeans
+export PATH="$HOME/Descargas/netbeans/bin:$PATH"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #configuración de ssh
@@ -65,6 +69,7 @@ alias ..="cd .."
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias lls="ls -al"
+alias cdnv="cd ~/.config/nvim/"
 #==========configuración git bare======
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
