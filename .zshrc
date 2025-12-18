@@ -11,6 +11,10 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
+#Path para netbeans
+export PATH="$HOME/Descargas/netbeans/bin:$PATH"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #configuración de ssh
