@@ -10,7 +10,7 @@ fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin" #nvim instalacion
 
 #Path para netbeans
 export PATH="$HOME/Descargas/netbeans/bin:$PATH"
@@ -75,3 +75,5 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 #To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

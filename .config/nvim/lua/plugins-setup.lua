@@ -26,5 +26,27 @@ require("lazy").setup({
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-  }
+  },
+
+  -- CONFIGURACIÓN PARA PYTHON
+  -- LSP y Mason: El cerebro para Python
+  {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  },
+  -- Tree-sitter: Resaltado de sintaxis inteligente
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
+
+
+  -- Autocompletado (opcional pero muy recomendado)
+  "hrsh7th/nvim-cmp",
+  "hrsh7th/cmp-nvim-lsp", -- Fuente de autocompletado para LSP
+  "hrsh7th/cmp-buffer",   -- Fuente para palabras en el archivo actual
+  -- Snippets (necesarios para que nvim-cmp funcione)
+  "L3MON4D3/LuaSnip",
+  "saadparwaiz1/cmp_luasnip",
 })
