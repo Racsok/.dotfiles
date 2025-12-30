@@ -22,4 +22,8 @@ set.autowrite = true
 
 -- mapper
 vim.g.mapleader = " " -- Facilita la busqueda de palabras clave
-vim.keymap.set("n", "-", vim.cmd.Ex) -- need nvim 0.8+
+vim.g.maplocalleader = "\\"vim.g.maplocalleader = "\\"
+-- vim.keymap.set("n", "-", vim.cmd.Ex) -- need nvim 0.8+
+
+-- Bufferline
+set.termguicolors = true
