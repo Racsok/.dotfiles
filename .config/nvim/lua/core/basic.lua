@@ -27,3 +27,8 @@ vim.g.maplocalleader = "\\"vim.g.maplocalleader = "\\"
 
 -- Bufferline
 set.termguicolors = true
+
+-- LSP config
+vim.diagnostic.config({
+	virtual_text = true -- mueastra los diagnosticos en pantalla
+})
