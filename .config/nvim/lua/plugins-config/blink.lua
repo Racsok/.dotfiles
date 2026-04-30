@@ -2,7 +2,7 @@
 return {
 	'saghen/blink.cmp',
 	-- optional: provides snippets for the snippet source
-	dependencies = { 'rafamadriz/friendly-snippets' },
+	dependencies = { 'rafamadriz/friendly-snippets', 'L3MON4D3/LuaSnip' },
 
 	-- use a release tag to download pre-built binaries
 	version = '1.*',
@@ -10,6 +10,9 @@ return {
 	---@module 'blink.cmp'
 	---@type blink.cmp.Config
 	opts = {
+		snippets = {
+		          preset = 'luasnip'
+		      },
 		-- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
 		-- 'super-tab' for mappings similar to vscode (tab to accept)
 		-- 'enter' for enter to accept
@@ -44,5 +47,11 @@ return {
 		-- See the fuzzy documentation for more information
 		fuzzy = { implementation = "prefer_rust_with_warning" }
 	},
+	config = function(_, opts)
+        -- Carga los snippets estilo VSCode (como friendly-snippets)
+        require("luasnip.loaders.from_vscode").lazy_load()
+        -- Aplica la configuración de blink
+        require('blink.cmp').setup(opts)
+    end,
 	opts_extend = { "sources.default" }
 }
