@@ -17,6 +17,8 @@ export PATH="$HOME/Descargas/netbeans/bin:$PATH"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+
+
 #configuración de ssh
 ssh-add -q ~/.ssh/lubuntu-hp 2>/dev/null
 
@@ -70,6 +72,7 @@ alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias lls="ls -al"
 alias cdnv="cd ~/.config/nvim/"
+alias tareas=".$HOME/Documentos/dist-tarea/main"
 #==========configuración git bare======
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -77,3 +80,15 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# bun completions
+[ -s "/home/oscar/.bun/_bun" ] && source "/home/oscar/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Configuracion para encontrar el comando nvim
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
